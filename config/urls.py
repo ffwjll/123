@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.urls import path
 from blog.views import post_list
 from core.views import reg_form, magic_number
-from play_list.views import play_list
+from play_list.views import play_list, add_video
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('magic_number/', magic_number),
     path('post_list/', post_list),
     path('play_list/', play_list),
+    path('add_video/', add_video),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

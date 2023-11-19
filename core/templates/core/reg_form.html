@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site</title>
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body data-bs-theme="dark">
+<section class="d-flex flex-column align-items-center">
+    <h1 class="m-0 text-center pb-2 fw-normal">Регистрация</h1>
+    <form class="d-flex flex-column gap-1" style="width: 300px" action="">
+        <input class="input form-control bg-white text-black" type="text" placeholder="Имя">
+        <input class="input form-control bg-white text-black" type="text" placeholder="Почта">
+        <input class="input form-control bg-white text-black" type="email" placeholder="Пароль">
+        <input class="input form-control bg-white text-black" type="password" placeholder="Повторите пароль">
+        <input class="input form-control bg-white text-black" type="number" name="any_name" min="1" max="100" step="1" placeholder="Возраст">
+        <div class="d-flex flex-row ms-2 ps-5">
+            <p class="m-0 text-secondary">Мужчина</p>
+            <input class="form-check-input m-1 rounded-circle" type="radio" name="any_name" value="yes">
+            <input class="form-check-input m-1 rounded-circle" type="radio" name="any_name" value="yes">
+            <p class="m-0 text-secondary">Женщина</p>
+        </div>
+        <div class="d-flex flex-row mb-2 gap-1 ps-5">
+            <input class="form-check-input m-1 ms-0" type="checkbox">
+            <p class="m-0 text-secondary">Хочу получать рассылку</p>
+        </div>
+        <button type="submit" class="btn btn-primary ms-4" style="width: 250px">Подтвердить</button>
+    </form>
+</section>
+</body>
+</html>

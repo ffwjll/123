@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+</head>
+<body data-bs-theme="dark">
+ {% include 'core/includes/header.html' %}
+<main>
+    <h1 class="m-0 mt-2 text-center pb-3 fw-normal">Видео</h1>
+    <div class="d-flex flex-row justify-content-center gap-3">
+        {% for video in videos %}
+            <div class="card bg-secondary text-dark rounded-4" style="width: 18rem;">
+                <iframe class="w-100 rounded-4" src="https://www.youtube.com/embed/{{ video.embed_code }}"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                <div class="card-body">
+                    <h5 class="card-title">{{ video.name }}</h5>
+                    <small>{{ video.created_at }}</small>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+</body>
+</html>

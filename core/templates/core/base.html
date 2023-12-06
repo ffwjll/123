@@ -1,10 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
 </head>
-<body>
-$END$
+<body data-bs-theme="dark">
+ {% include 'core/includes/header.html' %}
+<main>{% block content %}{% endblock %}</main>
 </body>
 </html>

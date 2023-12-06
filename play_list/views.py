@@ -9,7 +9,6 @@ def play_list(request):
 
 def add_video(request):
     if request.method == 'POST':
-        print(request.POST['embed_code'])
         name = request.POST['name']
         embed_code = request.POST['embed_code']
         Video.objects.create(name=name, embed_code=embed_code)

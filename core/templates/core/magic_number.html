@@ -10,7 +10,7 @@
 <body data-bs-theme="dark">
 {{ result }}
     <form class="d-flex flex-row" action="" method="post">{% csrf_token %}
-        <input class="input form-control bg-white text-black" style="width: 300px" type="number" name="number" placeholder="Ввидите число">
+        <input class="input form-control bg-white text-black" value="123" style="width: 300px" type="hidden" name="number" placeholder="Ввидите число">
         <button class="btn btn-primary ms-2" type="submit">Отправить</button>
     </form>
 </body>
